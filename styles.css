@@ -84,15 +84,31 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: 0em;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo svg {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
 }
 
 .nav-links {
@@ -260,16 +276,17 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .hero-title {
     font-size: 5rem;
-    font-weight: 800;
-    line-height: 1.25;
+    font-weight: 700;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
-    letter-spacing: 0em;
+    letter-spacing: 0.01em;
     animation: fadeInUp 0.8s ease 0.3s both;
     word-spacing: normal;
     white-space: normal;
     font-kerning: auto;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
 }
 
 .gradient-text {
@@ -288,6 +305,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     margin-left: auto;
     margin-right: auto;
     animation: fadeInUp 0.8s ease 0.4s both;
+    line-height: 1.6;
 }
 
 .hero-cta {
@@ -311,11 +329,13 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .stat-value {
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    line-height: 1;
+    font-variant-ligatures: common-ligatures;
 }
 
 .stat-label {
@@ -473,16 +493,19 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .section-header h2 {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 1rem;
-    letter-spacing: 0em;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
 }
 
 .section-header p {
     font-size: 1.25rem;
     color: var(--text-dim);
+    line-height: 1.6;
 }
 
 .proxy-container {
@@ -643,6 +666,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .feature-card p {
@@ -760,6 +784,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     font-size: 1.1rem;
     color: var(--text);
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .service-desc {
@@ -769,12 +794,14 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .pricing-cell.price {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     justify-content: center;
+    line-height: 1;
+    font-variant-ligatures: common-ligatures;
 }
 
 .pricing-cell.price span {
@@ -784,6 +811,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     background: none;
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
+    margin-top: 0.25rem;
 }
 
 .btn-small {
@@ -909,6 +937,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .price {
@@ -925,11 +954,13 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .amount {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    line-height: 1;
+    font-variant-ligatures: common-ligatures;
 }
 
 .period {
@@ -973,11 +1004,13 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .about-text h2 {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 2rem;
-    letter-spacing: 0em;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
 }
 
 .about-text p {
@@ -1026,12 +1059,14 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 
 .stat-number {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.5rem;
+    line-height: 1;
+    font-variant-ligatures: common-ligatures;
 }
 
 .stat-text {
@@ -1129,7 +1164,8 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .hero-title {
         font-size: 3.5rem;
-        line-height: 1.2;
+        line-height: 1.15;
+        font-weight: 700;
     }
     
     .hero-visual {
@@ -1195,12 +1231,14 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .hero-title {
         font-size: 2.5rem;
-        line-height: 1.2;
-        letter-spacing: 0em;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+        font-weight: 700;
     }
     
     .hero-description {
         font-size: 1.1rem;
+        line-height: 1.6;
     }
     
     .hero-cta {
@@ -1209,6 +1247,8 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .section-header h2 {
         font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.15;
     }
     
     .proxy-container {
@@ -1233,6 +1273,8 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .about-text h2 {
         font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.15;
     }
     
     .trust-badges {
@@ -1263,10 +1305,14 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .pricing-cell strong {
         font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.3;
     }
     
     .pricing-cell.price {
         font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1;
     }
     
     .btn-small {
