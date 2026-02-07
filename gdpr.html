@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance - ILLUSORY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .legal-section {
+            padding: 160px 0 120px;
+            min-height: 100vh;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .legal-header p {
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--dark-lighter);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .legal-content p {
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content li {
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .legal-content li:before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .last-updated {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .rights-box {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .rights-box h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L2 9L16 16L30 9L16 2Z" fill="url(#grad1)"/>
+                        <path d="M2 23L16 30L30 23L16 16L2 23Z" fill="url(#grad2)"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="2" y1="2" x2="30" y2="16">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="100%" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                            <linearGradient id="grad2" x1="2" y1="16" x2="30" y2="30">
+                                <stop offset="0%" stop-color="#8b5cf6"/>
+                                <stop offset="100%" stop-color="#d946ef"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>ILLUSORY</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#proxy">Proxy</a>
+                    <a href="index.html#pricing">Pricing</a>
+                    <a href="index.html#about">About</a>
+                    <a href="https://myaccount.ilusory.com/login" class="btn-secondary">Sign In</a>
+                    <a href="https://myaccount.ilusory.com/signup" class="btn-primary">Get Started</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Legal Section -->
+    <section class="legal-section">
+        <div class="container">
+            <div class="legal-header">
+                <h1>GDPR Compliance</h1>
+                <p>Your data rights under the General Data Protection Regulation</p>
+            </div>
+
+            <div class="legal-content">
+                <div class="last-updated">
+                    Last updated: March 2024
+                </div>
+
+                <h2>1. Introduction</h2>
+                <p>
+                    ILLUSORY is fully committed to compliance with the General Data Protection Regulation (GDPR). This page explains how we protect your rights as a data subject and how we handle your personal data in accordance with GDPR.
+                </p>
+
+                <h2>2. Your Rights Under GDPR</h2>
+                <p>
+                    If you are a resident of the European Union, you have the following rights regarding your personal data:
+                </p>
+
+                <div class="rights-box">
+                    <h3>Right to Access</h3>
+                    <p>You have the right to request access to the personal data we hold about you at any time.</p>
+                </div>
+
+                <div class="rights-box">
+                    <h3>Right to Rectification</h3>
+                    <p>You can request that we correct any inaccurate or incomplete personal data we hold about you.</p>
+                </div>
+
+                <div class="rights-box">
+                    <h3>Right to Erasure</h3>
+                    <p>You have the right to request deletion of your personal data under certain circumstances (the "right to be forgotten").</p>
+                </div>
+
+                <div class="rights-box">
+                    <h3>Right to Restrict Processing</h3>
+                    <p>You can request that we limit how we use your personal data in certain situations.</p>
+                </div>
+
+                <div class="rights-box">
+                    <h3>Right to Data Portability</h3>
+                    <p>You have the right to receive your personal data in a structured, commonly used format and transmit it to another controller.</p>
+                </div>
+
+                <div class="rights-box">
+                    <h3>Right to Object</h3>
+                    <p>You can object to our processing of your personal data for direct marketing or other legitimate interests.</p>
+                </div>
+
+                <div class="rights-box">
+                    <h3>Right to Lodge a Complaint</h3>
+                    <p>If you believe we have violated your GDPR rights, you can lodge a complaint with your local data protection authority.</p>
+                </div>
+
+                <h2>3. Legal Basis for Processing</h2>
+                <p>
+                    We process your personal data on the following legal bases:
+                </p>
+                <ul>
+                    <li><strong>Consent:</strong> Where you have explicitly agreed to specific processing</li>
+                    <li><strong>Contract:</strong> Where processing is necessary to perform our services to you</li>
+                    <li><strong>Legal Obligation:</strong> Where we are required by law to process your data</li>
+                    <li><strong>Legitimate Interests:</strong> Where we have a legitimate interest in processing your data</li>
+                </ul>
+
+                <h2>4. Data Protection Officer</h2>
+                <p>
+                    ILLUSORY has appointed a Data Protection Officer (DPO) to oversee GDPR compliance. You can contact our DPO at: <a href="mailto:dpo@illusory.com" style="color: var(--primary); text-decoration: none;">dpo@illusory.com</a>
+                </p>
+
+                <h2>5. International Data Transfers</h2>
+                <p>
+                    If you are based in the EU, please note that your data may be transferred to countries outside the EU. We ensure that such transfers are protected by appropriate safeguards, including:
+                </p>
+                <ul>
+                    <li>Standard Contractual Clauses (SCCs)</li>
+                    <li>Binding Corporate Rules (BCRs)</li>
+                    <li>Adequacy decisions</li>
+                </ul>
+
+                <h2>6. Data Retention</h2>
+                <p>
+                    We retain your personal data for as long as necessary to provide our services and fulfill the purposes outlined in our Privacy Policy. When data is no longer needed, we securely delete or anonymize it.
+                </p>
+
+                <h2>7. Data Breach Notification</h2>
+                <p>
+                    In the event of a personal data breach that poses a risk to your rights and freedoms, we will notify you and the relevant data protection authority within 72 hours of becoming aware of the breach, in accordance with GDPR requirements.
+                </p>
+
+                <h2>8. Exercising Your Rights</h2>
+                <p>
+                    To exercise any of your GDPR rights, please send a written request to:
+                </p>
+                <ul>
+                    <li>Email: <a href="mailto:gdpr@illusory.com" style="color: var(--primary); text-decoration: none;">gdpr@illusory.com</a></li>
+                    <li>Mail: ILLUSORY GDPR Office, [Company Address]</li>
+                </ul>
+                <p>
+                    We will respond to your request within 30 days (or up to 90 days for complex requests) in accordance with GDPR requirements.
+                </p>
+
+                <h2>9. GDPR Updates</h2>
+                <p>
+                    This GDPR compliance page may be updated periodically to reflect changes in our practices or regulations. We encourage you to review it regularly to stay informed about your rights and our obligations.
+                </p>
+
+                <h2>10. Questions?</h2>
+                <p>
+                    If you have any questions about our GDPR compliance or your data protection rights, please don't hesitate to contact us at: <a href="mailto:privacy@illusory.com" style="color: var(--primary); text-decoration: none;">privacy@illusory.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L2 9L16 16L30 9L16 2Z" fill="url(#grad1-footer)"/>
+                            <path d="M2 23L16 30L30 23L16 16L2 23Z" fill="url(#grad2-footer)"/>
+                            <defs>
+                                <linearGradient id="grad1-footer" x1="2" y1="2" x2="30" y2="16">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#8b5cf6"/>
+                                </linearGradient>
+                                <linearGradient id="grad2-footer" x1="2" y1="16" x2="30" y2="30">
+                                    <stop offset="0%" stop-color="#8b5cf6"/>
+                                    <stop offset="100%" stop-color="#d946ef"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>ILLUSORY</span>
+                    </a>
+                    <p>Privacy-first web proxy and VPN service trusted by 500K+ users worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#proxy">Web Proxy</a>
+                        <a href="index.html#pricing">Pricing</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="index.html#about">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Account</h4>
+                        <a href="https://myaccount.ilusory.com/login">Sign In</a>
+                        <a href="https://myaccount.ilusory.com/signup">Sign Up</a>
+                        <a href="https://myaccount.ilusory.com/recovery">Forgot Password</a>
+                        <a href="https://myaccount.ilusory.com/">My Account</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                        <a href="gdpr.html">GDPR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ILLUSORY. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M6.29 18.25c7.55 0 11.67-6.25 11.67-11.67 0-.18 0-.35-.01-.53A8.35 8.35 0 0020 3.92a8.2 8.2 0 01-2.36.65 4.13 4.13 0 001.81-2.27 8.19 8.19 0 01-2.61 1 4.1 4.1 0 00-7 3.74A11.65 11.65 0 011.39 2.62a4.1 4.1 0 001.27 5.47 4.07 4.07 0 01-1.86-.51v.05a4.1 4.1 0 003.3 4.03 4.1 4.1 0 01-1.86.07 4.11 4.11 0 003.83 2.85A8.23 8.23 0 010 16.67a11.62 11.62 0 006.29 1.84"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Discord">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M16.934 3.467a13.442 13.442 0 00-3.32-1.03.05.05 0 00-.053.025c-.143.255-.302.588-.413.85a12.417 12.417 0 00-3.726 0 8.106 8.106 0 00-.419-.85.052.052 0 00-.053-.025c-1.147.198-2.25.545-3.32 1.03a.047.047 0 00-.021.018C1.356 6.943.649 10.32 1.034 13.65a.056.056 0 00.021.038 13.5 13.5 0 004.067 2.056.052.052 0 00.056-.019c.308-.42.582-.863.819-1.329a.051.051 0 00-.028-.071 8.888 8.888 0 01-1.271-.606.052.052 0 01-.005-.086c.085-.064.171-.13.252-.198a.05.05 0 01.052-.007c2.666 1.218 5.553 1.218 8.186 0a.05.05 0 01.053.006c.081.067.167.135.252.199a.052.052 0 01-.004.086c-.406.237-.83.437-1.272.605a.051.051 0 00-.027.072c.242.466.516.908.818 1.329a.052.052 0 00.056.019 13.456 13.456 0 004.073-2.056.051.051 0 00.021-.037c.461-3.853-.772-7.2-3.267-10.167a.04.04 0 00-.021-.018zM6.678 11.863c-1.089 0-1.985-.999-1.985-2.226s.88-2.226 1.985-2.226c1.112 0 2 1.007 1.985 2.226 0 1.227-.88 2.226-1.985 2.226zm6.655 0c-1.089 0-1.985-.999-1.985-2.226s.88-2.226 1.985-2.226c1.113 0 2 1.007 1.985 2.226 0 1.227-.872 2.226-1.985 2.226z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
