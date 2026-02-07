@@ -76,6 +76,8 @@ body {
     align-items: center;
     height: 80px;
     padding: 0 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -84,11 +86,13 @@ body {
     gap: 0.75rem;
     font-weight: 800;
     font-size: 1.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0em;
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav-links {
@@ -257,12 +261,15 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
 .hero-title {
     font-size: 5rem;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: 0em;
     animation: fadeInUp 0.8s ease 0.3s both;
     word-spacing: normal;
     white-space: normal;
+    font-kerning: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .gradient-text {
@@ -468,7 +475,9 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .section-header p {
@@ -966,7 +975,9 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 2rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .about-text p {
@@ -1118,6 +1129,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .hero-title {
         font-size: 3.5rem;
+        line-height: 1.2;
     }
     
     .hero-visual {
@@ -1183,7 +1195,8 @@ button, a.btn-primary, a.btn-secondary, a.btn-outline, a.btn-large, a.btn-small 
     
     .hero-title {
         font-size: 2.5rem;
-        line-height: 1.15;
+        line-height: 1.2;
+        letter-spacing: 0em;
     }
     
     .hero-description {
