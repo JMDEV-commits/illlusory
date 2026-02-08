@@ -1,21 +1,4 @@
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileMenuBtn.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
-    });
-});
-
-// Proxy functionality
+ // Proxy functionality
 const proxyUrl = document.getElementById('proxyUrl');
 const proxySubmit = document.getElementById('proxySubmit');
 const quickLinks = document.querySelectorAll('.quick-link');
@@ -97,6 +80,15 @@ quickLinks.forEach(link => {
         proxyUrl.value = url;
         proxyUrl.focus();
     });
+});
+
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenuBtn.classList.toggle('active');
 });
 
 // Smooth scrolling for navigation links
@@ -297,28 +289,17 @@ style.textContent = `
     }
     
     .nav-links.active {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 80px;
         left: 0;
         right: 0;
         background: rgba(15, 23, 42, 0.98);
         backdrop-filter: blur(20px);
-        padding: 1.5rem;
-        gap: 0.75rem;
+        padding: 2rem;
+        gap: 1.5rem;
         border-bottom: 1px solid rgba(100, 116, 139, 0.2);
-        z-index: 999;
-    }
-    
-    .nav-links.active a {
-        padding: 0.75rem 1rem;
-        border-radius: 0.5rem;
-        transition: background-color 0.2s ease;
-    }
-    
-    .nav-links.active a:hover {
-        background-color: rgba(99, 102, 241, 0.1);
     }
     
     .mobile-menu-btn.active span:nth-child(1) {
