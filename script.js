@@ -16,52 +16,6 @@ pricingTabs.forEach(tab => {
     });
 });
 
-// Proxy functionality (only runs if proxy elements exist)
-const proxyUrl = document.getElementById('proxyUrl');
-const proxySubmit = document.getElementById('proxySubmit');
-const quickLinks = document.querySelectorAll('.quick-link');
-
-if (proxySubmit && proxyUrl) {
-    proxySubmit.addEventListener('click', handleProxySubmit);
-    proxyUrl.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleProxySubmit();
-    });
-}
-
-function handleProxySubmit() {
-    if (!proxyUrl) return;
-    const url = proxyUrl.value.trim();
-    if (!url) {
-        proxyUrl.focus();
-        return;
-    }
-    let cleanUrl = url;
-    if (!cleanUrl.startsWith('http://') && !cleanUrl.startsWith('https://')) {
-        cleanUrl = 'https://' + cleanUrl;
-    }
-    const removeAds = document.getElementById('removeAds')?.checked;
-    const removeScripts = document.getElementById('removeScripts')?.checked;
-    const removeCookies = document.getElementById('removeCookies')?.checked;
-
-    const params = new URLSearchParams();
-    if (removeAds) params.append('no-ads', 'true');
-    if (removeScripts) params.append('no-scripts', 'true');
-    if (removeCookies) params.append('no-cookies', 'true');
-
-    // Redirect to account signup if not signed in
-    window.location.href = 'https://myaccount.ilusory.com/signup';
-}
-
-quickLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (proxyUrl) {
-            proxyUrl.value = link.getAttribute('data-url');
-            proxyUrl.focus();
-            proxyUrl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-    });
-});
-
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.querySelector('.nav-links');
