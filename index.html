@@ -18,15 +18,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes heroCardFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: rotate(-0.5deg) translateY(0px); }
+            50% { transform: rotate(-0.5deg) translateY(-12px); }
         }
         @keyframes heroCardFloatAlt {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(10px); }
+            0%, 100% { transform: rotate(0.5deg) translateY(0px); }
+            50% { transform: rotate(0.5deg) translateY(12px); }
         }
+        @keyframes ledPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+        .led-pulse { animation: ledPulse 1.6s ease-in-out infinite; }
         .hero-bg-card { pointer-events: none; user-select: none; }
-        @media (max-width: 1024px) { .hero-bg-card { display: none !important; } }
+        @media (max-width: 1100px) { .hero-bg-card { display: none !important; } }
     </style>
 </head>
 <body>
@@ -72,10 +77,67 @@
     <!-- Hero Section -->
     <section class="hero">
 
-        <!-- ── Floating background cards (desktop only) ── -->
+        <!-- ── Datacenter server rack visuals (desktop only) ── -->
 
-        <!-- LEFT: IP Masking Card -->
-        <div class="hero-bg-card absolute" style="left:2%;top:170px;animation:heroCardFloat 6s ease-in-out infinite;opacity:0.72;">
+        <!-- LEFT: Server Rack -->
+        <div class="hero-bg-card" style="position:absolute;left:1.5%;top:118px;opacity:0.38;filter:drop-shadow(0 0 28px rgba(129,140,248,0.14));animation:heroCardFloat 9s ease-in-out infinite;">
+            <svg width="176" height="420" viewBox="0 0 176 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.75" y="0.75" width="174.5" height="418.5" rx="5" fill="#06080f" stroke="#1e2b3f" stroke-width="1.5"/>
+                <rect x="0.75" y="0.75" width="14" height="418.5" rx="4" fill="#0b1120" stroke="#1e2b3f" stroke-width="0.75"/>
+                <circle cx="7.75" cy="55" r="2" fill="#182030"/><circle cx="7.75" cy="110" r="2" fill="#182030"/><circle cx="7.75" cy="165" r="2" fill="#182030"/><circle cx="7.75" cy="220" r="2" fill="#182030"/><circle cx="7.75" cy="275" r="2" fill="#182030"/><circle cx="7.75" cy="330" r="2" fill="#182030"/><circle cx="7.75" cy="385" r="2" fill="#182030"/>
+                <rect x="161.25" y="0.75" width="14" height="418.5" rx="4" fill="#0b1120" stroke="#1e2b3f" stroke-width="0.75"/>
+                <circle cx="168.25" cy="55" r="2" fill="#182030"/><circle cx="168.25" cy="110" r="2" fill="#182030"/><circle cx="168.25" cy="165" r="2" fill="#182030"/><circle cx="168.25" cy="220" r="2" fill="#182030"/><circle cx="168.25" cy="275" r="2" fill="#182030"/><circle cx="168.25" cy="330" r="2" fill="#182030"/><circle cx="168.25" cy="385" r="2" fill="#182030"/>
+                <!-- Unit 1: active indigo -->
+                <rect x="15" y="14" width="146" height="22" rx="2" fill="#121b2d" stroke="#818cf8" stroke-width="0.75" stroke-opacity="0.45"/><rect x="15" y="14" width="4" height="22" rx="1" fill="#818cf8" fill-opacity="0.7"/><rect x="23" y="21" width="82" height="2" rx="1" fill="#818cf8" fill-opacity="0.12"/>
+                <circle cx="149" cy="25" r="2.5" fill="#34d399"/><circle cx="140" cy="25" r="2.5" fill="#34d399"/><circle cx="131" cy="25" r="2.5" fill="#818cf8"/>
+                <!-- Unit 2: idle -->
+                <rect x="15" y="40" width="146" height="22" rx="2" fill="#090d17" stroke="#161e2e" stroke-width="0.75"/><rect x="15" y="40" width="4" height="22" rx="1" fill="#1f2d3e" fill-opacity="0.5"/><rect x="23" y="47" width="44" height="2" rx="1" fill="#374151" fill-opacity="0.2"/>
+                <circle cx="149" cy="51" r="2.5" fill="#2d3748"/><circle cx="140" cy="51" r="2.5" fill="#2d3748"/><circle cx="131" cy="51" r="2.5" fill="#2d3748"/>
+                <!-- Unit 3: active-high green -->
+                <rect x="15" y="66" width="146" height="22" rx="2" fill="#0b1c14" stroke="#34d399" stroke-width="0.75" stroke-opacity="0.4"/><rect x="15" y="66" width="4" height="22" rx="1" fill="#34d399" fill-opacity="0.7"/><rect x="23" y="73" width="100" height="2" rx="1" fill="#34d399" fill-opacity="0.1"/>
+                <circle cx="149" cy="77" r="2.5" fill="#34d399"/><circle cx="140" cy="77" r="2.5" fill="#34d399"/><circle cx="131" cy="77" r="2.5" fill="#34d399"/>
+                <!-- Unit 4: active indigo -->
+                <rect x="15" y="92" width="146" height="22" rx="2" fill="#121b2d" stroke="#818cf8" stroke-width="0.75" stroke-opacity="0.45"/><rect x="15" y="92" width="4" height="22" rx="1" fill="#818cf8" fill-opacity="0.7"/><rect x="23" y="99" width="68" height="2" rx="1" fill="#818cf8" fill-opacity="0.12"/>
+                <circle cx="149" cy="103" r="2.5" fill="#34d399"/><circle cx="140" cy="103" r="2.5" fill="#34d399"/><circle cx="131" cy="103" r="2.5" fill="#818cf8"/>
+                <!-- Unit 5: processing violet -->
+                <rect x="15" y="118" width="146" height="22" rx="2" fill="#130e21" stroke="#a78bfa" stroke-width="0.75" stroke-opacity="0.4"/><rect x="15" y="118" width="4" height="22" rx="1" fill="#a78bfa" fill-opacity="0.7"/><rect x="23" y="125" width="76" height="2" rx="1" fill="#a78bfa" fill-opacity="0.12"/>
+                <circle cx="149" cy="129" r="2.5" fill="#a78bfa" class="led-pulse"/><circle cx="140" cy="129" r="2.5" fill="#a78bfa" class="led-pulse"/><circle cx="131" cy="129" r="2.5" fill="#a78bfa" class="led-pulse"/>
+                <!-- Unit 6: idle -->
+                <rect x="15" y="144" width="146" height="22" rx="2" fill="#090d17" stroke="#161e2e" stroke-width="0.75"/><rect x="15" y="144" width="4" height="22" rx="1" fill="#1f2d3e" fill-opacity="0.5"/><rect x="23" y="151" width="56" height="2" rx="1" fill="#374151" fill-opacity="0.2"/>
+                <circle cx="149" cy="155" r="2.5" fill="#2d3748"/><circle cx="140" cy="155" r="2.5" fill="#2d3748"/><circle cx="131" cy="155" r="2.5" fill="#2d3748"/>
+                <!-- Unit 7: active indigo -->
+                <rect x="15" y="170" width="146" height="22" rx="2" fill="#121b2d" stroke="#818cf8" stroke-width="0.75" stroke-opacity="0.45"/><rect x="15" y="170" width="4" height="22" rx="1" fill="#818cf8" fill-opacity="0.7"/><rect x="23" y="177" width="90" height="2" rx="1" fill="#818cf8" fill-opacity="0.12"/>
+                <circle cx="149" cy="181" r="2.5" fill="#34d399"/><circle cx="140" cy="181" r="2.5" fill="#34d399"/><circle cx="131" cy="181" r="2.5" fill="#818cf8"/>
+                <!-- Unit 8: patch panel (port grid) -->
+                <rect x="15" y="196" width="146" height="22" rx="2" fill="#0c1016" stroke="#1a2535" stroke-width="0.75"/>
+                <circle cx="27" cy="203" r="3.5" fill="#0f1620" stroke="#2d3f59" stroke-width="0.75"/><circle cx="38" cy="203" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/><circle cx="49" cy="203" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/><circle cx="60" cy="203" r="3.5" fill="#0f1620" stroke="#2d3f59" stroke-width="0.75"/><circle cx="71" cy="203" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/><circle cx="82" cy="203" r="3.5" fill="#0f1620" stroke="#818cf8" stroke-width="0.75"/><circle cx="93" cy="203" r="3.5" fill="#0f1620" stroke="#818cf8" stroke-width="0.75"/><circle cx="104" cy="203" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/>
+                <circle cx="27" cy="212" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/><circle cx="38" cy="212" r="3.5" fill="#0f1620" stroke="#2d3f59" stroke-width="0.75"/><circle cx="49" cy="212" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/><circle cx="60" cy="212" r="3.5" fill="#0f1620" stroke="#818cf8" stroke-width="0.75"/><circle cx="71" cy="212" r="3.5" fill="#0f1620" stroke="#2d3f59" stroke-width="0.75"/><circle cx="82" cy="212" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/><circle cx="93" cy="212" r="3.5" fill="#0f1620" stroke="#2d3f59" stroke-width="0.75"/><circle cx="104" cy="212" r="3.5" fill="#0f1620" stroke="#34d399" stroke-width="0.75"/>
+                <circle cx="148" cy="207" r="2" fill="#34d399"/>
+                <!-- Unit 9: idle -->
+                <rect x="15" y="222" width="146" height="22" rx="2" fill="#090d17" stroke="#161e2e" stroke-width="0.75"/><rect x="15" y="222" width="4" height="22" rx="1" fill="#1f2d3e" fill-opacity="0.5"/><rect x="23" y="229" width="38" height="2" rx="1" fill="#374151" fill-opacity="0.2"/>
+                <circle cx="149" cy="233" r="2.5" fill="#2d3748"/><circle cx="140" cy="233" r="2.5" fill="#2d3748"/><circle cx="131" cy="233" r="2.5" fill="#2d3748"/>
+                <!-- Unit 10: active-high green -->
+                <rect x="15" y="248" width="146" height="22" rx="2" fill="#0b1c14" stroke="#34d399" stroke-width="0.75" stroke-opacity="0.4"/><rect x="15" y="248" width="4" height="22" rx="1" fill="#34d399" fill-opacity="0.7"/><rect x="23" y="255" width="88" height="2" rx="1" fill="#34d399" fill-opacity="0.1"/>
+                <circle cx="149" cy="259" r="2.5" fill="#34d399"/><circle cx="140" cy="259" r="2.5" fill="#34d399"/><circle cx="131" cy="259" r="2.5" fill="#34d399"/>
+                <!-- Unit 11: warning amber -->
+                <rect x="15" y="274" width="146" height="22" rx="2" fill="#120f07" stroke="#f59e0b" stroke-width="0.75" stroke-opacity="0.4"/><rect x="15" y="274" width="4" height="22" rx="1" fill="#f59e0b" fill-opacity="0.7"/><rect x="23" y="281" width="62" height="2" rx="1" fill="#f59e0b" fill-opacity="0.1"/>
+                <circle cx="149" cy="285" r="2.5" fill="#f59e0b" class="led-pulse"/><circle cx="140" cy="285" r="2.5" fill="#34d399"/><circle cx="131" cy="285" r="2.5" fill="#f59e0b" class="led-pulse"/>
+                <!-- Unit 12: idle -->
+                <rect x="15" y="300" width="146" height="22" rx="2" fill="#090d17" stroke="#161e2e" stroke-width="0.75"/><rect x="15" y="300" width="4" height="22" rx="1" fill="#1f2d3e" fill-opacity="0.5"/><rect x="23" y="307" width="50" height="2" rx="1" fill="#374151" fill-opacity="0.2"/>
+                <circle cx="149" cy="311" r="2.5" fill="#2d3748"/><circle cx="140" cy="311" r="2.5" fill="#2d3748"/><circle cx="131" cy="311" r="2.5" fill="#2d3748"/>
+                <!-- Unit 13: active indigo -->
+                <rect x="15" y="326" width="146" height="22" rx="2" fill="#121b2d" stroke="#818cf8" stroke-width="0.75" stroke-opacity="0.45"/><rect x="15" y="326" width="4" height="22" rx="1" fill="#818cf8" fill-opacity="0.7"/><rect x="23" y="333" width="74" height="2" rx="1" fill="#818cf8" fill-opacity="0.12"/>
+                <circle cx="149" cy="337" r="2.5" fill="#34d399"/><circle cx="140" cy="337" r="2.5" fill="#34d399"/><circle cx="131" cy="337" r="2.5" fill="#818cf8"/>
+                <!-- Unit 14: processing violet -->
+                <rect x="15" y="352" width="146" height="22" rx="2" fill="#130e21" stroke="#a78bfa" stroke-width="0.75" stroke-opacity="0.4"/><rect x="15" y="352" width="4" height="22" rx="1" fill="#a78bfa" fill-opacity="0.7"/><rect x="23" y="359" width="84" height="2" rx="1" fill="#a78bfa" fill-opacity="0.12"/>
+                <circle cx="149" cy="363" r="2.5" fill="#a78bfa" class="led-pulse"/><circle cx="140" cy="363" r="2.5" fill="#a78bfa" class="led-pulse"/><circle cx="131" cy="363" r="2.5" fill="#a78bfa" class="led-pulse"/>
+                <!-- Unit 15: active indigo -->
+                <rect x="15" y="378" width="146" height="22" rx="2" fill="#121b2d" stroke="#818cf8" stroke-width="0.75" stroke-opacity="0.45"/><rect x="15" y="378" width="4" height="22" rx="1" fill="#818cf8" fill-opacity="0.7"/><rect x="23" y="385" width="94" height="2" rx="1" fill="#818cf8" fill-opacity="0.12"/>
+                <circle cx="149" cy="389" r="2.5" fill="#34d399"/><circle cx="140" cy="389" r="2.5" fill="#34d399"/><circle cx="131" cy="389" r="2.5" fill="#818cf8"/>
+            </svg>
+        </div>
+
+        <!-- Dummy to be replaced --><div class="hero-bg-card absolute" style="display:none!important">
             <div class="bg-slate-900 border border-indigo-500/25 rounded-2xl p-4 w-60 backdrop-blur-sm shadow-xl shadow-black/30">
                 <div class="flex items-center gap-2 mb-3">
                     <div class="w-6 h-6 rounded-lg bg-indigo-500/15 flex items-center justify-center flex-shrink-0">
