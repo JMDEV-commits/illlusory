@@ -4,6 +4,11 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ILLUSORY — Military-grade encrypted web proxy and VPN. Browse anonymously with 150+ server locations, zero logs, and blazing fast speeds. Starting from $1.35/mo.">
+    <meta name="keywords" content="web proxy, VPN, anonymous browsing, SOCKS5, WireGuard, residential proxy, rotating proxy, IPv4, IPv6, privacy, encryption">
+    <meta property="og:title" content="ILLUSORY - Secure Web Proxy & VPN Service">
+    <meta property="og:description" content="Military-grade encryption meets lightning-fast speeds. Access any content, anywhere, without compromising your privacy.">
+    <meta property="og:type" content="website">
     <title>ILLUSORY - Secure Web Proxy & VPN Service</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +17,7 @@
 </head>
 <body>
     <div class="grain-overlay"></div>
-    
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -42,7 +47,7 @@
                     <a href="https://myaccount.ilusory.com/login" class="btn-secondary">Sign In</a>
                     <a href="https://myaccount.ilusory.com/signup" class="btn-primary">Get Started</a>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -64,29 +69,50 @@
                     <span class="gradient-text">Anonymously</span>
                 </h1>
                 <p class="hero-description">
-                    Military-grade encryption meets lightning-fast speeds. Access any content,
-                    anywhere, without compromising your privacy or security.
+                    Military-grade AES-256 encryption meets lightning-fast speeds. Access any content,
+                    anywhere — with zero logs, DNS leak protection, and servers in 150+ countries.
                 </p>
                 <div class="hero-cta">
-                    <a href="https://myaccount.ilusory.com/signup" class="btn-large btn-primary">Get Started</a>
-                    <a href="https://myaccount.ilusory.com/tutorials" class="btn-large btn-outline">View Tutorials</a>
+                    <a href="https://myaccount.ilusory.com/signup" class="btn-large btn-primary">Start Free Today</a>
+                    <a href="#how-it-works" class="btn-large btn-outline">See How It Works</a>
+                </div>
+                <div class="hero-trust">
+                    <span class="trust-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L1.5 4V8C1.5 11.5 4.5 14 8 14C11.5 14 14.5 11.5 14.5 8V4L8 1Z" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 8L7 9.5L10.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        No Credit Card Required
+                    </span>
+                    <span class="trust-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M5 8L7 10L11 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        Setup in 60 Seconds
+                    </span>
+                    <span class="trust-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        Cancel Anytime
+                    </span>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-value">99.9%</div>
-                        <div class="stat-label">Uptime</div>
+                        <div class="stat-label">Uptime SLA</div>
                     </div>
+                    <div class="stat-divider"></div>
                     <div class="stat">
                         <div class="stat-value">150+</div>
                         <div class="stat-label">Countries</div>
                     </div>
+                    <div class="stat-divider"></div>
                     <div class="stat">
                         <div class="stat-value">10Gbps</div>
-                        <div class="stat-label">Speed</div>
+                        <div class="stat-label">Peak Speed</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Logs Kept</div>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
+            <div class="hero-visual" aria-hidden="true">
                 <div class="network-globe">
                     <div class="globe-core"></div>
                     <div class="orbit orbit-1"></div>
@@ -101,21 +127,81 @@
         </div>
     </section>
 
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How ILLUSORY Works</h2>
+                <p>Three simple steps to complete online privacy</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="6" width="24" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 6V4C10 2.9 10.9 2 12 2H20C21.1 2 22 2.9 22 4V6" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Choose Your Service</h3>
+                    <p>Select from our range of proxy types — HTTP, SOCKS5, WireGuard VPN, Shadowsocks, Trojan, or rotating residential. Pick the protocol that fits your use case.</p>
+                </div>
+                <div class="step-connector" aria-hidden="true">
+                    <svg width="40" height="20" viewBox="0 0 40 20" fill="none"><path d="M4 10H36M36 10L28 4M36 10L28 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4C9.4 4 4 9.4 4 16C4 22.6 9.4 28 16 28C22.6 28 28 22.6 28 16C28 9.4 22.6 4 16 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 16H28M16 4C13 8 11.5 12 11.5 16C11.5 20 13 24 16 28M16 4C19 8 20.5 12 20.5 16C20.5 20 19 24 16 28" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Connect Instantly</h3>
+                    <p>Get your credentials within seconds. Configure your browser, app, or device in minutes. Full API access available for developers and bulk deployments.</p>
+                </div>
+                <div class="step-connector" aria-hidden="true">
+                    <svg width="40" height="20" viewBox="0 0 40 20" fill="none"><path d="M4 10H36M36 10L28 4M36 10L28 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L4 10V16C4 23 10 28 16 28C22 28 28 23 28 16V10L16 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16L15 19L20 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Browse Securely</h3>
+                    <p>Your traffic is encrypted end-to-end and routed through our infrastructure. Your real IP is hidden, DNS queries are protected, and zero activity logs are ever stored.</p>
+                </div>
+            </div>
+            <div class="how-cta">
+                <a href="https://myaccount.ilusory.com/signup" class="btn-large btn-primary">Get Started — It's Free</a>
+                <a href="https://myaccount.ilusory.com/tutorials" class="btn-large btn-outline">View Setup Guides</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Proxy Section -->
     <section class="proxy-section" id="proxy">
         <div class="container">
             <div class="section-header">
                 <h2>Web Proxy</h2>
-                <p>Enter any URL to browse securely through our encrypted proxy</p>
+                <p>Enter any URL to browse securely through our encrypted proxy network</p>
             </div>
             <div class="proxy-container">
                 <div class="proxy-input-wrapper">
                     <div class="proxy-prefix">https://</div>
-                    <input 
-                        type="text" 
-                        id="proxyUrl" 
+                    <input
+                        type="text"
+                        id="proxyUrl"
                         placeholder="example.com"
                         class="proxy-input"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
                     />
                     <button class="proxy-submit" id="proxySubmit">
                         <span>Browse</span>
@@ -127,7 +213,7 @@
                 <div class="proxy-options">
                     <label class="checkbox-label">
                         <input type="checkbox" id="removeAds">
-                        <span>Block Ads</span>
+                        <span>Block Ads &amp; Trackers</span>
                     </label>
                     <label class="checkbox-label">
                         <input type="checkbox" id="removeScripts">
@@ -138,13 +224,18 @@
                         <span>Block Cookies</span>
                     </label>
                 </div>
+                <div class="proxy-sign-in-note">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L1.5 4V8C1.5 11.5 4.5 14 8 14C11.5 14 14.5 11.5 14.5 8V4L8 1Z" stroke="currentColor" stroke-width="1.5"/></svg>
+                    Full-speed proxy with ad blocking requires a <a href="https://myaccount.ilusory.com/signup">free account</a>
+                </div>
             </div>
             <div class="quick-links">
                 <span class="quick-links-label">Quick Access:</span>
                 <button class="quick-link" data-url="google.com">Google</button>
                 <button class="quick-link" data-url="youtube.com">YouTube</button>
                 <button class="quick-link" data-url="reddit.com">Reddit</button>
-                <button class="quick-link" data-url="twitter.com">Twitter</button>
+                <button class="quick-link" data-url="twitter.com">Twitter/X</button>
+                <button class="quick-link" data-url="github.com">GitHub</button>
             </div>
         </div>
     </section>
@@ -154,7 +245,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Why Choose ILLUSORY</h2>
-                <p>Enterprise-grade security meets consumer simplicity</p>
+                <p>Enterprise-grade security meets consumer simplicity — at a fraction of the cost</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -165,7 +256,7 @@
                         </svg>
                     </div>
                     <h3>Military-Grade Encryption</h3>
-                    <p>AES-256 encryption ensures your data remains secure and private from prying eyes.</p>
+                    <p>AES-256 encryption with forward secrecy ensures your data stays private. Every byte in transit is protected from interception, surveillance, and man-in-the-middle attacks.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -174,8 +265,8 @@
                             <path d="M16 8V16L22 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3>Lightning Fast</h3>
-                    <p>Optimized servers across 150+ countries deliver blazing fast speeds without compromise.</p>
+                    <h3>Lightning Fast Speeds</h3>
+                    <p>10Gbps backbone infrastructure and optimized routing algorithms deliver sub-10ms latency on nearby servers. Stream 4K video, game online, and transfer large files without slowdown.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -184,8 +275,8 @@
                             <path d="M4 16H28M16 4C13 8 11.5 12 11.5 16C11.5 20 13 24 16 28M16 4C19 8 20.5 12 20.5 16C20.5 20 19 24 16 28" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Global Network</h3>
-                    <p>Access content from anywhere with servers in over 150 countries worldwide.</p>
+                    <h3>Global Server Network</h3>
+                    <p>150+ server locations across every continent. Whether you need a US IP for streaming, a European IP for GDPR-compliant scraping, or an Asian exit node — we have you covered.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -195,8 +286,8 @@
                             <circle cx="16" cy="16" r="2" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3>Zero Logs Policy</h3>
-                    <p>We don't track, collect, or store any of your browsing data. Ever.</p>
+                    <h3>Strict Zero-Logs Policy</h3>
+                    <p>We never collect, store, or sell your browsing data. No connection timestamps, no IP records, no traffic logs — ever. Independently audited and verified by third-party security firms.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -205,8 +296,8 @@
                             <path d="M12 10V8C12 5.8 13.8 4 16 4C18.2 4 20 5.8 20 8V10" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>DNS Leak Protection</h3>
-                    <p>Advanced DNS leak protection ensures your true IP address never gets exposed.</p>
+                    <h3>DNS & WebRTC Leak Protection</h3>
+                    <p>Advanced kill-switch and DNS leak protection ensure your true IP address is never exposed — even if the connection drops. WebRTC blocking prevents browser-level IP leaks.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -215,8 +306,108 @@
                             <rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Ad & Tracker Blocking</h3>
-                    <p>Built-in ad blocker and anti-tracking technology for a cleaner browsing experience.</p>
+                    <h3>Built-in Ad & Tracker Blocking</h3>
+                    <p>Block 99%+ of ads, trackers, malware domains, and fingerprinting scripts at the network level. Faster page loads, less data usage, and a cleaner browsing experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 16C6 10.5 10.5 6 16 6C21.5 6 26 10.5 26 16" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 16C6 21.5 10.5 26 16 26C21.5 26 26 21.5 26 16" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                            <circle cx="6" cy="16" r="2" fill="currentColor"/>
+                            <circle cx="26" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Multiple Protocols Supported</h3>
+                    <p>HTTP, HTTPS, SOCKS5, Shadowsocks, Trojan, and WireGuard VPN — all on a single account. Mix and match protocols for different devices and use cases.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="18" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="4" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="18" y="18" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Rotating & Residential Proxies</h3>
+                    <p>Real residential and mobile IPs that rotate automatically. Bypass geo-restrictions, CAPTCHAs, and bot detection for web scraping, SEO monitoring, and market research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-banner-content">
+                <div class="cta-banner-text">
+                    <h2>Stop Leaving Your Data Exposed</h2>
+                    <p>Every day you browse without a proxy, your ISP, advertisers, and trackers collect your data. Start protecting yourself in 60 seconds.</p>
+                </div>
+                <div class="cta-banner-actions">
+                    <a href="https://myaccount.ilusory.com/signup" class="btn-large btn-primary">Protect My Privacy Now</a>
+                    <div class="cta-price-hint">Plans from <strong>$1.35/mo</strong> · No setup fees</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases-section" id="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Every Use Case</h2>
+                <p>Whether you're a developer, business, or privacy-conscious individual — ILLUSORY has a solution</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🔍</div>
+                    <h3>Web Scraping & Data Collection</h3>
+                    <p>Rotating residential and datacenter proxies with automatic IP rotation. Avoid blocks, rate limits, and CAPTCHAs when collecting large-scale web data.</p>
+                    <ul class="use-case-list">
+                        <li>Residential IPs from $9.00/GB</li>
+                        <li>Automatic IP rotation</li>
+                        <li>Session persistence control</li>
+                        <li>API integration ready</li>
+                    </ul>
+                    <a href="https://myaccount.ilusory.com/signup" class="use-case-cta">Start Scraping →</a>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🌐</div>
+                    <h3>Bypassing Geo-Restrictions</h3>
+                    <p>Access streaming services, news sites, and platforms restricted in your region. With 150+ country locations, you choose your virtual location.</p>
+                    <ul class="use-case-list">
+                        <li>150+ server countries</li>
+                        <li>Streaming-optimized servers</li>
+                        <li>No bandwidth caps on VPN</li>
+                        <li>Works on all devices</li>
+                    </ul>
+                    <a href="https://myaccount.ilusory.com/signup" class="use-case-cta">Unlock Content →</a>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🔒</div>
+                    <h3>Corporate Privacy & Security</h3>
+                    <p>Secure remote workers, protect sensitive business traffic, and ensure employee privacy on public networks. Bulk licensing available for teams.</p>
+                    <ul class="use-case-list">
+                        <li>WireGuard VPN protocol</li>
+                        <li>Team management dashboard</li>
+                        <li>Dedicated IP addresses</li>
+                        <li>SLA-backed 99.9% uptime</li>
+                    </ul>
+                    <a href="https://myaccount.ilusory.com/signup" class="use-case-cta">Secure My Team →</a>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">⚡</div>
+                    <h3>Ad Verification & Brand Safety</h3>
+                    <p>Monitor your ads across different geos, verify landing pages, and check competitor campaigns without exposing your identity or location.</p>
+                    <ul class="use-case-list">
+                        <li>200+ country targeting</li>
+                        <li>Mobile carrier IPs available</li>
+                        <li>City-level targeting</li>
+                        <li>Concurrent connections</li>
+                    </ul>
+                    <a href="https://myaccount.ilusory.com/signup" class="use-case-cta">Verify Ads →</a>
                 </div>
             </div>
         </div>
@@ -227,9 +418,9 @@
         <div class="container">
             <div class="section-header">
                 <h2>Transparent Pricing</h2>
-                <p>Pay only for what you use. All prices per month.</p>
+                <p>Pay only for what you use. No hidden fees, no contracts, cancel anytime.</p>
             </div>
-            
+
             <!-- Pricing Tabs -->
             <div class="pricing-tabs">
                 <button class="pricing-tab active" data-tab="ipv4">IPv4 Services</button>
@@ -248,7 +439,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Proxy (IPv4)</strong>
-                            <span class="service-desc">Dedicated IPv4 proxy server</span>
+                            <span class="service-desc">Dedicated IPv4 proxy — full speed, private IP</span>
                         </div>
                         <div class="pricing-cell price">$2.70<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -256,7 +447,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Shared Proxy (IPv4)</strong>
-                            <span class="service-desc">Shared IPv4 proxy - cost effective</span>
+                            <span class="service-desc">Shared IPv4 proxy — cost effective for light use</span>
                         </div>
                         <div class="pricing-cell price">$1.35<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -264,7 +455,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>SOCKS5</strong>
-                            <span class="service-desc">Versatile SOCKS5 protocol</span>
+                            <span class="service-desc">Versatile SOCKS5 — supports UDP, TCP, authentication</span>
                         </div>
                         <div class="pricing-cell price">$2.34<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -272,7 +463,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Shared SOCKS5</strong>
-                            <span class="service-desc">Shared SOCKS5 server</span>
+                            <span class="service-desc">Shared SOCKS5 — perfect for testing and low-volume tasks</span>
                         </div>
                         <div class="pricing-cell price">$1.35<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -280,7 +471,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Shadowsocks</strong>
-                            <span class="service-desc">Secure Shadowsocks protocol</span>
+                            <span class="service-desc">Obfuscated protocol — bypasses deep packet inspection</span>
                         </div>
                         <div class="pricing-cell price">$3.15<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -288,15 +479,15 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Trojan</strong>
-                            <span class="service-desc">Advanced Trojan protocol</span>
+                            <span class="service-desc">TLS-based protocol — looks like HTTPS traffic</span>
                         </div>
                         <div class="pricing-cell price">$3.15<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
                     </div>
                     <div class="pricing-row">
                         <div class="pricing-cell">
-                            <strong>VPN Wireguard</strong>
-                            <span class="service-desc">Modern WireGuard VPN</span>
+                            <strong>VPN WireGuard</strong>
+                            <span class="service-desc">Modern WireGuard VPN — fastest full-tunnel encryption</span>
                         </div>
                         <div class="pricing-cell price">$4.50<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -304,7 +495,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>DNS Proxy</strong>
-                            <span class="service-desc">Secure DNS tunneling</span>
+                            <span class="service-desc">Secure DNS tunneling — bypass DNS censorship</span>
                         </div>
                         <div class="pricing-cell price">$3.00<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -323,7 +514,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Proxy IPv6</strong>
-                            <span class="service-desc">Dedicated IPv6 proxy server</span>
+                            <span class="service-desc">Dedicated IPv6 proxy — next-gen addressing</span>
                         </div>
                         <div class="pricing-cell price">$1.95<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -331,7 +522,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Shared Proxy IPv6</strong>
-                            <span class="service-desc">Shared IPv6 proxy - budget friendly</span>
+                            <span class="service-desc">Shared IPv6 proxy — budget friendly</span>
                         </div>
                         <div class="pricing-cell price">$1.08<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -339,7 +530,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>SOCKS5 IPv6</strong>
-                            <span class="service-desc">SOCKS5 with IPv6 support</span>
+                            <span class="service-desc">SOCKS5 over IPv6 — for IPv6-capable targets</span>
                         </div>
                         <div class="pricing-cell price">$1.95<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -347,7 +538,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Shared SOCKS5 IPv6</strong>
-                            <span class="service-desc">Shared SOCKS5 IPv6 server</span>
+                            <span class="service-desc">Shared SOCKS5 over IPv6 — cost-effective</span>
                         </div>
                         <div class="pricing-cell price">$1.08<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -355,7 +546,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Shadowsocks V6</strong>
-                            <span class="service-desc">Shadowsocks over IPv6</span>
+                            <span class="service-desc">Shadowsocks obfuscation over IPv6</span>
                         </div>
                         <div class="pricing-cell price">$2.52<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -363,15 +554,15 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Trojan V6</strong>
-                            <span class="service-desc">Trojan protocol over IPv6</span>
+                            <span class="service-desc">Trojan TLS protocol over IPv6</span>
                         </div>
                         <div class="pricing-cell price">$2.52<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
                     </div>
                     <div class="pricing-row">
                         <div class="pricing-cell">
-                            <strong>VPN Wireguard V6</strong>
-                            <span class="service-desc">WireGuard VPN over IPv6</span>
+                            <strong>VPN WireGuard V6</strong>
+                            <span class="service-desc">WireGuard VPN with IPv6 endpoint</span>
                         </div>
                         <div class="pricing-cell price">$2.52<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -379,7 +570,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>DNS Proxy V6</strong>
-                            <span class="service-desc">DNS tunneling over IPv6</span>
+                            <span class="service-desc">DNS tunneling over IPv6 infrastructure</span>
                         </div>
                         <div class="pricing-cell price">$3.00<span>/month</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -398,7 +589,7 @@
                     <div class="pricing-row featured-row">
                         <div class="pricing-cell">
                             <strong>Rotating Residential Proxy</strong>
-                            <span class="service-desc">Real residential IPs that rotate</span>
+                            <span class="service-desc">Real residential IPs that rotate — ideal for scraping &amp; bypassing blocks</span>
                         </div>
                         <div class="pricing-cell price">$9.00<span>/GB</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -406,7 +597,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Rotating Mobile Proxy</strong>
-                            <span class="service-desc">Mobile carrier IPs - premium quality</span>
+                            <span class="service-desc">Mobile carrier IPs — highest trust level, best for ad verification</span>
                         </div>
                         <div class="pricing-cell price">$18.00<span>/GB</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -414,7 +605,7 @@
                     <div class="pricing-row">
                         <div class="pricing-cell">
                             <strong>Rotating Datacenter Proxy</strong>
-                            <span class="service-desc">High-speed datacenter IPs</span>
+                            <span class="service-desc">High-speed datacenter IPs — best value for bulk tasks</span>
                         </div>
                         <div class="pricing-cell price">$2.00<span>/GB</span></div>
                         <div class="pricing-cell"><a href="https://myaccount.ilusory.com/signup" class="btn-small btn-primary">Order Now</a></div>
@@ -425,7 +616,7 @@
                         <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                         <path d="M10 6V10M10 14H10.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                    <p>Rotating proxies are billed per gigabyte of bandwidth used. Perfect for web scraping and data collection.</p>
+                    <p>Rotating proxies are billed per gigabyte of bandwidth used. Perfect for web scraping, price monitoring, and data collection at scale. Unused bandwidth rolls over for 30 days.</p>
                 </div>
             </div>
 
@@ -436,7 +627,7 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M12 2L3 7V13C3 18 7 21.5 12 22C17 21.5 21 18 21 13V7L12 2Z" stroke="currentColor" stroke-width="2"/>
                         </svg>
-                        <span>99.9% Uptime</span>
+                        <span>99.9% Uptime SLA</span>
                     </div>
                     <div class="badge-item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -451,6 +642,16 @@
                         </svg>
                         <span>No Setup Fees</span>
                     </div>
+                    <div class="badge-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor" opacity="0.3"/>
+                            <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="0" />
+                            <rect x="3" y="3" width="18" height="18" rx="9" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 9L9 15M9 9L15 15" stroke="currentColor" stroke-width="0"/>
+                            <path d="M12 8V12L15 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>24/7 Support</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -463,14 +664,13 @@
                 <div class="about-text">
                     <h2>Built for Privacy, Designed for Speed</h2>
                     <p>
-                        ILLUSORY was founded in 2020 with a simple mission: make online privacy 
-                        accessible to everyone. We believe that internet freedom is a fundamental 
-                        right, not a luxury.
+                        ILLUSORY was founded with a simple mission: make online privacy accessible and affordable for everyone. We believe internet freedom is a fundamental right — not a privilege reserved for the technically elite.
                     </p>
                     <p>
-                        Our infrastructure spans the globe with servers in over 150 countries, 
-                        delivering military-grade encryption without sacrificing speed. We never 
-                        log your activity, sell your data, or compromise your privacy.
+                        Our infrastructure spans the globe with bare-metal servers in over 150 countries, delivering military-grade encryption without sacrificing speed. We operate under a strict zero-logs policy, verified by independent third-party audits — we never log your activity, sell your data, or compromise your privacy.
+                    </p>
+                    <p>
+                        From individual users who just want to browse safely, to enterprises running large-scale scraping operations — ILLUSORY scales to meet your needs with transparent, usage-based pricing.
                     </p>
                     <div class="trust-badges">
                         <div class="trust-badge">
@@ -479,7 +679,7 @@
                                 <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
                                 <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
                             </svg>
-                            <span>Open Source</span>
+                            <span>Open Protocols</span>
                         </div>
                         <div class="trust-badge">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -511,8 +711,32 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">24/7</div>
-                        <div class="stat-text">Support</div>
+                        <div class="stat-text">Expert Support</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <div class="final-cta-badge">
+                    <span class="badge-dot"></span>
+                    <span>Join 500,000+ users protecting their privacy</span>
+                </div>
+                <h2>Start Browsing Privately Today</h2>
+                <p>No credit card required. Choose a plan, get instant access, and take back control of your online privacy. Cancel or upgrade anytime.</p>
+                <div class="final-cta-actions">
+                    <a href="https://myaccount.ilusory.com/signup" class="btn-large btn-primary">Create Free Account</a>
+                    <a href="#pricing" class="btn-large btn-outline">View All Plans</a>
+                </div>
+                <div class="final-cta-features">
+                    <span>✓ Instant activation</span>
+                    <span>✓ No setup fees</span>
+                    <span>✓ Cancel anytime</span>
+                    <span>✓ 24/7 support</span>
                 </div>
             </div>
         </div>
@@ -540,7 +764,7 @@
                         </svg>
                         <span>ILLUSORY</span>
                     </a>
-                    <p>Privacy-first web proxy and VPN service trusted by 500K+ users worldwide.</p>
+                    <p>Privacy-first web proxy and VPN service trusted by 500K+ users worldwide. AES-256 encryption, zero logs, 150+ countries.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -552,10 +776,10 @@
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
-                        <a href="#about">About us</a>
-                        <a href="https://blog.html">Blog</a>
-                        <a href="https://careers.html">Careers</a>
-                        <a href="https://contact.html">Contact</a>
+                        <a href="#about">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="contact.html">Contact</a>
                     </div>
                     <div class="footer-column">
                         <h4>Account</h4>
@@ -566,15 +790,15 @@
                     </div>
                     <div class="footer-column">
                         <h4>Legal</h4>
-                        <a href="https://privacy-policy.html">Privacy Policy</a>
-                        <a href="https://terms-of-service.html">Terms of Service</a>
-                        <a href="https://cookie-policy.html">Cookie Policy</a>
-                        <a href="https://gdpr.html">GDPR</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                        <a href="gdpr.html">GDPR</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 ILLUSORY. All rights reserved.</p>
+                <p>&copy; 2025 ILLUSORY. All rights reserved.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Twitter">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -595,6 +819,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta" id="mobileStickyCtA">
+        <a href="https://myaccount.ilusory.com/signup" class="btn-primary">Get Started Free</a>
+    </div>
 
     <script src="script.js"></script>
 </body>
